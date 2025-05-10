@@ -37,40 +37,41 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h2>Employee List</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>} 
-      <table border="1" cellPadding="10" style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr style={{backgroundColor:'rgb(24,89,61)',color:'white'}}>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Role</th>
-          </tr>
-        </thead>
-        <tbody>
-          {currentEmployees.map((emp) => (
-            <tr key={emp.id}>
-              <td>{emp.id}</td>
-              <td>{emp.name}</td>
-              <td>{emp.email}</td>
-              <td>{emp.role}</td>
+    <><h2>Employee List</h2>
+      <div>
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <table border="1" cellPadding="10" style={{ width: '100%', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr style={{ backgroundColor: 'rgb(24,89,61)', color: 'white' }}>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {currentEmployees.map((emp) => (
+              <tr key={emp.id}>
+                <td>{emp.id}</td>
+                <td>{emp.name}</td>
+                <td>{emp.email}</td>
+                <td>{emp.role}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <div className='buttonlog'>
-        <button onClick={goToPrevious} disabled={currentPage === 1}>
-          Previous
-        </button>
-        <span style={{ margin: '0 15px' }}>Page {currentPage}</span>
-        <button onClick={goToNext} disabled={currentPage === totalPages}>
-          Next
-        </button>
+        <div className='buttonlog'>
+          <button onClick={goToPrevious} disabled={currentPage === 1}>
+            Previous
+          </button>
+          <span style={{ margin: '0 15px' }}>Page {currentPage}</span>
+          <button onClick={goToNext} disabled={currentPage === totalPages}>
+            Next
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
-div {
-  padding: 20px;
+*{
+  font-family: auto;
 }
 
 h2 {
@@ -9,6 +9,8 @@ h2 {
 button{
   background-color: rgb(24,89,61);
   color: white;
+  font-size: medium;
+  border-radius: 5px;
 }
 
 .buttonlog{
