@@ -65,7 +65,7 @@ const App = () => {
           <button onClick={goToPrevious} disabled={currentPage === 1}>
             Previous
           </button>
-          <span style={{ margin: '0 15px' }}>Page {currentPage}</span>
+          <button style={{ margin: '0 15px',fontSize:"22px" }}> {currentPage}</button>
           <button onClick={goToNext} disabled={currentPage === totalPages}>
             Next
           </button>
