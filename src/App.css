@@ -1,0 +1,17 @@
+div {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+button{
+  background-color: rgb(24,89,61);
+  color: white;
+}
+
+.buttonlog{
+  margin-top: 20px;
+  text-align: center;
+}
